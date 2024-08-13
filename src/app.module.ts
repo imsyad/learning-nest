@@ -3,11 +3,11 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserController } from './user/user.controller';
 import { TaskController } from './task/task.controller';
-import { AuthModule } from './auth/auth.module';
+import { UserService } from './user/user.service';
 
 @Module({
-  imports: [AuthModule],
+  imports: [],
   controllers: [AppController, UserController, TaskController],
-  providers: [AppService],
+  providers: [AppService, UserService],
 })
 export class AppModule {}
